@@ -39,5 +39,5 @@ Modern enterprises need automation—yet a single LLM call rarely cuts it. Compl
 ## Get Started
 1. **Clone the Repo**  
    ```bash
-   git clone https://github.com/YourOrg/ThePocket.git
-   cd ThePocket
+   git clone https://github.com/helenaeverleyz/pocket.git
+   cd pocket
