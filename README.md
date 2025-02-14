@@ -1,10 +1,10 @@
-# The Pocket: A Human-AI Co-Design Platform for AI Systems
+# Pocket: A Human-AI Co-Design Platform for AI Systems
 
 > Build enterprise-ready AI systems—fast, modular, and vendor-agnostic.
 
 ---
 
-## Why The Pocket?
+## Why Pocket?
 Modern enterprises need automation—yet a single LLM call rarely cuts it. Complex tasks require multiple AI calls, external APIs, and iterative refinement. Traditional “all-in-one” AI frameworks often lock you in or can’t handle evolving requirements. **The Pocket** focuses on **human-AI co-design**: 
 - **Humans** specify goals, constraints, and domain expertise.
 - **AI** does the heavy lifting (workflow design, optimization, and integration).
