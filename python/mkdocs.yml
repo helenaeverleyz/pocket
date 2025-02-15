@@ -1,0 +1,51 @@
+site_name: Pocket Flow
+site_description: Minimalist LLM Framework in 100 Lines, Enabling LLMs to Program Themselves
+site_url: https://github.com/the-pocket/PocketFlow
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+nav:
+  - Overview: index.md
+  - Agent: agent.md
+  - Batch: batch.md
+  - Communication: communication.md
+  - Core Abstraction: core_abstraction.md
+  - LLM: llm.md
+  - MapReduce: mapreduce.md
+  - Node: node.md
+  - Paradigm: paradigm.md
+  - Preparation: preparation.md
+  - RAG: rag.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/the-pocket/PocketFlow
