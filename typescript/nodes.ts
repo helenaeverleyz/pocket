@@ -24,7 +24,7 @@ exports.AsyncParallelBatchFlow = exports.AsyncBatchFlow = exports.AsyncFlow = ex
 
 class BaseNode {
     protected params: NodeParams;
-    protected successors: NodeSuccessors;
+    public successors: NodeSuccessors;
 
     constructor() {
         this.params = {};
@@ -107,7 +107,7 @@ abstract class AsyncNode<T extends SharedState = SharedState> extends BaseNode {
                 return await this.execAsync(prepRes);
             } catch (error) {
                 if (this.curRetry === this.maxRetries - 1) {
-                    return await this.execFallbackAsync(prepRes, error);
+                    return await this.execFallbackAsync(prepRes, error as Error);
                 }
                 if (this.wait > 0) {
                     await new Promise(resolve => setTimeout(resolve, this.wait * 1000));
@@ -185,7 +185,7 @@ class AsyncFlow<T extends SharedState = SharedState> extends BaseNode {
     }
 
     protected async _orchAsync(shared: T, params?: NodeParams): Promise<void> {
-        let curr = this.shallowCopyNode(this.start);
+        let curr: AsyncNode<T> | undefined = this.shallowCopyNode(this.start);
         const mergedParams = params ? { ...this.params, ...params } : { ...this.params };
         
         while (curr) {
@@ -234,7 +234,7 @@ class AsyncBatchFlow<T extends SharedState = SharedState> extends AsyncFlow<T> {
 class AsyncParallelBatchFlow<T extends SharedState = SharedState> extends AsyncFlow<T> {
     protected async _runAsync(shared: T): Promise<any> {
         const batchData = await this.prepAsync(shared) || [];
-        await Promise.all(batchData.map((bp) => this._orchAsync(shared, bp)));
+        await Promise.all(batchData.map((bp: any) => this._orchAsync(shared, bp)));
         return this.postAsync(shared, batchData, null);
     }
 }
@@ -288,8 +288,6 @@ exports.AsyncFlow = AsyncFlow;
 exports.AsyncBatchFlow = AsyncBatchFlow;
 exports.AsyncParallelBatchFlow = AsyncParallelBatchFlow;
 export {
-    DocState,
-    SummarizeThenVerify,
-    Finalize
+    DocState, Finalize, SummarizeThenVerify
 };
 
