@@ -6,49 +6,68 @@ nav_order: 1
 
 # Pocket Flow
 
-An (https://github.com/helenaeverleyz/pocket) LLM framework for *Agents, Task Decomposition, RAG, etc*.
+A TypeScript framework for building **LLM-powered applications** with:
+- 🤖 Intelligent Agents
+- 🧩 Task Decomposition
+- 📚 Retrieval Augmented Generation (RAG)
+- And more...
 
+## Architecture
 
-We model the LLM workflow as a **Nested Directed Graph**:
-- **Nodes** handle simple (LLM) tasks.
-- Nodes connect through **Actions** (labeled edges) for *Agents*.  
-- **Flows** orchestrate a directed graph of Nodes for *Task Decomposition*.
-- A Flow can be used as a Node (for **Nesting**).
-- **Batch** Nodes/Flows for data-intensive tasks.
-- **Async** Nodes/Flows allow waits or **Parallel** execution
+We model LLM workflows as a **Nested Directed Graph** where:
 
+- 🔹 **Nodes** handle atomic LLM tasks
+- 🔗 **Actions** connect nodes (labeled edges) for agent behavior
+- 🔄 **Flows** orchestrate node graphs for task decomposition
+- 📦 **Nesting** allows flows to be used as nodes
+- 📊 **Batch** processing for data-intensive tasks
+- ⚡ **Async** support for parallel execution
 
 <div align="center">
   <img src="https://github.com/the-pocket/PocketFlow/raw/main/assets/minillmflow.jpg?raw=true" width="400"/>
 </div>
 
-## Core Abstraction
+---
 
-- [Node](./node.md)
-- [Flow](./flow.md)
-- [Communication](./communication.md)
-- [Batch](./batch.md)
-- [(Advanced) Async](./async.md)
-- [(Advanced) Parallel](./parallel.md)
+## Getting Started
 
-## Low-Level Details
+- [Quick Start](./guide.md)
+- [Setup Steps](./preparation.md)
+- [Key Abstractions](./core_abstraction.md)
 
-- [LLM Wrapper](./llm.md)
-- [Tool](./tool.md)
-- [Viz and Debug](./viz.md)
-- Chunking
+## Core Concepts
 
-## High-Level Paradigm
+- [Agent Basics](./agent.md)
+- [Node Fundamentals](./node.md)
+- [Understanding Flows](./flow.md)
+- [Data Structures](./structure.md)
 
-- [Structured Output](./structure.md)
+## Features & Extensions
+
+### Basic Features
+- [Async Processing](./async.md)
+- [Batch Operations](./batch.md)
+- [Communication Patterns](./communication.md)
 - [Task Decomposition](./decomp.md)
-- [Map Reduce](./mapreduce.md)
-- [RAG](./rag.md)
-- [Chat Memory](./memory.md)
-- [Agent](./agent.md)
-- [(Advanced) Multi-Agents](./multi_agent.md)
 
-## Example LLM Apps
+### Advanced Capabilities
+- [Large Language Models](./llm.md)
+- [MapReduce Workflows](./mapreduce.md)
+- [Memory & Caching](./memory.md)
+- [Multi-Agent Systems](./multi_agent.md)
+- [Parallel Execution](./parallel.md)
+- [Retrieval Augmented Generation](./rag.md)
+- [Tool Integrations](./tool.md)
 
-[LLM System Design Guidance](./guide.md)
+## Additional Resources
+
+- [Sample Applications](./apps.md)
+- [Conceptual Paradigms](./paradigm.md)
+- [Visualizations](./viz.md)
+
+---
+
+<div align="center">
+  <p><i>Built with TypeScript for production-grade LLM applications</i></p>
+</div>
 
