@@ -5,8 +5,7 @@
 
 > Build enterprise-ready AI systems—fast, modular, and vendor-agnostic.
 
-A [100-line](pocket/src/pocket.ts) typescript LLM framework for ([Multi-]https://helenaeverleyz.github.io/pocket/multi_agent/)[Agents](https://helenaeverleyz.github.io/pocket/agent/), [Prompt Chaining](https://the-pocket.github.io/PocketFlow/decomp.html), [RAG](https://helenaeverleyz.github.io/pocket/rag/), etc.
-
+A [typescript](pocket/src/pocket.ts) LLM framework for [Multi-Agents](https://helenaeverleyz.github.io/pocket/multi_agent/), [Agents](https://helenaeverleyz.github.io/pocket/agent/), [Prompt Chaining](https://the-pocket.github.io/PocketFlow/decomp.html), [RAG](https://helenaeverleyz.github.io/pocket/rag/), etc.
 - Install via  ```pip install pocket```, or just copy the [source codes](pocket/src/pocket.ts)
 ---
 
