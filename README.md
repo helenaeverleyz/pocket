@@ -1,7 +1,13 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![Docs](https://img.shields.io/badge/docs-latest-blue)](https://helenaeverleyz.github.io/pocket/)
+
 # Pocket: A Human-AI Co-Design Platform for AI Systems
 
 > Build enterprise-ready AI systems—fast, modular, and vendor-agnostic.
 
+A [100-line](pocket/src/pocket.ts) typescript LLM framework for ([Multi-]https://helenaeverleyz.github.io/pocket/multi_agent/)[Agents](https://helenaeverleyz.github.io/pocket/agent/), [Prompt Chaining](https://the-pocket.github.io/PocketFlow/decomp.html), [RAG](https://helenaeverleyz.github.io/pocket/rag/), etc.
+
+- Install via  ```pip install pocket```, or just copy the [source codes](pocket/src/pocket.ts)
 ---
 
 ## Why Pocket?
@@ -33,6 +39,17 @@ Modern enterprises need automation—yet a single LLM call rarely cuts it. Compl
 ## Why Not Full Automation?
 - **Limited Search Space**: Fully automated optimizers can’t easily handle custom tools, new APIs, or fuzzy requirements.  
 - **Ambiguity is Real**: Business goals often shift mid-project. Human insight is crucial to keep AI systems on track.
+
+---
+
+| Framework      | Computation Models | Communication Models | App-Specific Models                                    | Vendor-Specific Models                                   | Lines Of Codes            | Package + Dependency Size         |
+|:--------------:|:------------------:|:--------------------:|:-------------------------------------------------------:|:--------------------------------------------------------:|:-----------------:|:---------------------------:|
+| LangChain      | Agent, Chain       | Message              | Many                       | Many                          | *405K*            | *+166MB*                    |
+| CrewAI         | Agent, Chain       | Message, Shared      | Many              | Many               | *18K*             | *+173MB*                    |
+| SmolAgent      | Agent              | Message              | Some              | Some              | *8K*              | *+198MB*                    |
+| LangGraph      | Agent, Graph       | Message, Shared      | Some                          | Some                  | *37K*             | *+51MB*                     |
+| AutoGen        | Agent              | Message              | Some                   | Many             | *7K*  | *+26MB*         |
+| **PocketFlow** | **Graph**          | **Shared**           | **None**                                                | **None**                                                | **100**           | **+56KB**                   |
 
 ---
 
